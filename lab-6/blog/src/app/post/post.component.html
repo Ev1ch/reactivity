@@ -1,0 +1,9 @@
+<div class="card">
+  <p style="text-align: right">
+    Дата: {{ post.date | date : "HH:mm:ss dd:MM:yyyy" }}
+  </p>
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.text }}</p>
+  <button class="btn" (click)="removePost()">&times;</button>
+  <ng-content></ng-content>
+</div>

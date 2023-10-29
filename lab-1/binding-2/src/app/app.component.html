@@ -1,0 +1,8 @@
+<div [class.isRedBox]="isRed"></div>
+<div [class.isRedBox]="!isRed"></div>
+<input type="checkbox" [(ngModel)]="isRed" />
+<div [class]="blue"></div>
+<br /><br />
+<div [style.backgroundColor]="isYellow ? 'yellow' : 'blue'"></div>
+<div [style.background-color]="!isYellow ? 'yellow' : 'blue'"></div>
+<input type="checkbox" [(ngModel)]="isYellow" />
