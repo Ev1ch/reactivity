@@ -13,13 +13,14 @@ export class CounterDirective {
   constructor(
     private container: ViewContainerRef,
     private template: TemplateRef<Object>
-  ) {
-    26;
-  }
+  ) {}
+
   @Input('counterOf')
   counter: number = 0;
+
   ngOnChanges(changes: SimpleChanges) {
     this.container.clear();
+
     for (let i = 0; i < this.counter; i++) {
       this.container.createEmbeddedView(
         this.template,
